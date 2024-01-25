@@ -32,7 +32,7 @@ pipeline {
         stage('Deployment') {
             steps {
                 sh 'sshpass -p "sameer" scp target/gamutkart.war sameer@172.17.0.2:/home/sameer/proj/apache-tomcat-9.0.84/webapps'
-                sh 'sshpass -p "sameer" ssh sameer@172.17.0.2 "/home/sameer/proj/apache-tomcat-9.0.80/bin/startup.sh"'
+                sh 'sshpass -p "sameer" ssh sameer@172.17.0.2 "/home/sameer/proj/apache-tomcat-9.0.84/bin/startup.sh"'
             }
         }
     }
